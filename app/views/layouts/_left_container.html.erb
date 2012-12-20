@@ -1,0 +1,34 @@
+<div class="clear"></div>
+<div class="module">
+
+	<ul>
+	 <%
+	    if @page.children.present? 
+	      parent_page = @page
+	    else
+	      parent_page = @page.parent
+	    end
+	  %>
+	 <% unless @page.slug == "about" || @page.slug == "about" %>
+	  <% Refinery::Page.where(parent_id: parent_page.id).each do |menu_item| %>
+            <% bad_children = ["Page Not Found", "Thank You", "Privacy Policy"] %>
+            <% unless bad_children.include?(menu_item.title) %>
+	      <li> <%= link_to menu_item.title, menu_item %> </li>
+            <% end %>
+	  <% end %>
+          <% end %>
+	</ul>
+
+<%=link_to image_tag('left_container/force.png'), "/contact-us" %>
+<%=link_to image_tag('left_container/rails.png'), "/contact-us" %>
+<%=link_to image_tag('left_container/call.png'), "/contact-us" %>
+</div>
+<div class="clear"></div>
+<br>
+<!-- language -->
+        <% Refinery::I18n.frontend_locales.each do |frontend_locale| %>
+          <%= image_tag "refinery/icons/flags/#{frontend_locale}.png" %> 
+          <%= link_to Refinery::I18n.locales[frontend_locale], refinery.url_for(:locale => frontend_locale) %>
+        <% end %>
+     
+<!-- END language -->

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+    
+    
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+  
+    
+        <%= render '/refinery/header' -%>
+    
+
+
+
+<div id="center">
+    <div id="header">
+        <div id="logo"><%= link_to image_tag("software_allies.jpg"), "http://softwareallies.com" %></div>
+        <div id="menu">
+           <%= render 'refinery/menu' %> 
+        </div>
+    <div id="social">
+        <%= link_to image_tag("social/facebook.jpg"), "https://www.facebook.com/Software.Allies" %>    
+        <%= link_to image_tag("social/twitter.jpg"), "http://twitter.com/softwareallies" %>
+        <%= link_to image_tag("social/linkedin.jpg"), "http://www.linkedin.com/in/softwareallies" %>
+        <br/>     <b>1 888 890 3670</b>
+        </div>
+        </div>    
+
+      <div id="content">
+           
+                            
+
+        
+          <%= yield %>
+       </div>
+                <%= render '/refinery/footer' -%>
+
+  </div>
+
+
+
+    <%= render '/refinery/javascripts' %>
+    <SCRIPT type="text/javascript" src="https://lct.salesforce.com/sfga.js"></SCRIPT>
+<SCRIPT type="text/javascript">__sfga();</SCRIPT> 
+<script type="text/javascript">
+  var _cctq = _cctq || [];
+  _cctq.push(['cct_log', '0820-aP4aegde6V9i2e1w093e45bdaaeb5a7673134dc1']);
+  (function() {
+  var cctjs = document.createElement('script'); cctjs.type = 'text/javascript'; cctjs.async = true;
+  cctjs.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cn.clickable.net/js/cct.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cctjs, s);
+  })();
+  </script>
+  <script type="text/javascript">
+  var _cctq = _cctq || [];
+  _cctq.push(['cct_setConversionValue', '1']);
+  _cctq.push(['cct_log', '0420-aL4eeadd6921093e45bdaaeb5a7673134dc1']);
+  (function() {
+  var cctjs = document.createElement('script'); cctjs.type =
+  'text/javascript'; cctjs.async = true;
+  cctjs.src = ('https:' == document.location.protocol ? 'https://' : 'http://')
+  + 'cn.clickable.net/js/cct.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(cctjs, s);
+  })();
+</script>
+<script type="text/javascript">
+  adroll_adv_id = "6PORSSA7Y5ERBMZ4XBW4PK";
+  adroll_pix_id = "VROTX6NU5BA5JLLE67VCLX";
+  (function () {
+  var oldonload = window.onload;
+  window.onload = function(){
+     __adroll_loaded=true;
+     var scr = document.createElement("script");
+     var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+     scr.setAttribute('async', 'true');
+     scr.type = "text/javascript";
+     scr.src = host + "/j/roundtrip.js";
+     ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+     if(oldonload){oldonload()}};
+  }());
+</script>
+</div>
+  </body>
+</html>

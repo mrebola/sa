@@ -1,0 +1,11 @@
+<% content_for :slideshow do %>
+ <div class="clear"></div>
+  <div id="slideshow">
+    <% @page.images.each do |image| %>
+        <%= image_tag(image.url) %>
+   <% end %>
+  </div>
+  <div id="slideshow_shadow"><%= image_tag "shadow.jpg" %></div>
+<% end %>
+
+<%= render '/refinery/content_page' %>
