@@ -11,7 +11,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'sqlite3'
-
+  gem 'taps'
 end
 
 group :assets do
