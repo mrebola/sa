@@ -23,4 +23,5 @@ end
 group :production do
   gem 'pg'
   gem 'fog'
+  gem 'newrelic_rpm'
 end
