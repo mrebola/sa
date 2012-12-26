@@ -1,8 +1,8 @@
 <% content_for :side_body do %>
     <%= render '/layouts/left_container' %>
 <% end %>
-<% content_for :body_content_title do %>
-  &nbsp
+<% content_for :body_content_title, class: 'invisible' do %>
+  
 <% end %>
 <%= render_content_page(@page, {
       :hide_sections => local_assigns[:hide_sections],

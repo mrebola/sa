@@ -43,7 +43,7 @@ h3, h3 a{ color:#EA6480; font-size: 25px; font-weight: bold; }
 /*Slideshow*/
 
 .view_more { float: right; color:#EA6480; padding: 4px;}
-
+#content h1{ display: none;}
 
 /*FORM* S*/
 
