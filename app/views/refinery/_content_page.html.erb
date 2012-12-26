@@ -1,6 +1,9 @@
 <% content_for :side_body do %>
     <%= render '/layouts/left_container' %>
 <% end %>
+<% content_for :body_content_title do %>
+  &nbsp
+<% end %>
 <%= render_content_page(@page, {
       :hide_sections => local_assigns[:hide_sections],
       :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
