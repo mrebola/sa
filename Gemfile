@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'refinerycms', '~> 2.0.0'
 gem 'refinerycms-i18n',   '~> 2.0.0'
 gem 'refinerycms-page-images', '~> 2.0.0'
+gem 'rack', git: 'git://github.com/rack/rack.git'
 
 group :development do
   gem 'debugger'
